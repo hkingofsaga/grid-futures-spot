@@ -1,0 +1,22 @@
+{
+    "runBet": {
+        "next_buy_price": 2,
+        "grid_sell_price": 3,
+        "position_spot_price": 0,
+        "spot_step": 0,
+        "future_step": 0
+    },
+    "config": {
+        "position": true,
+        "position_size": 5,
+        "profit_ratio": 2,
+        "double_throw_ratio": 2,
+        "cointype": "EOSUSDT",
+        "spot_quantity": [
+            10
+        ],
+        "future_quantity": [
+            10
+        ]
+    }
+}

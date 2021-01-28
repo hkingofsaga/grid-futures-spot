@@ -15,10 +15,14 @@
     "runBet": {
         "next_buy_price": 2.71,        <-- 现货买入价格，期货卖出价格
         "grid_sell_price": 2.87,       <-- 现货卖出价格, 期货买入价格
+        "position_spot_price":0        <-- 现货持仓均价  
         "spot_step": 0,                <-- 现货当前持仓手数(你买了几手仓)
         "future_step": 2               <-- 期货当前持仓手数(你开了几手仓)
+        
     },
     "config": {
+        "position":true,               <-- 是否使用持仓均价平仓 (true为开启，false为关闭)
+        "position_size":5              <-- 持仓均价目标仓位数 (当spot_size < position_size 那么现货不再网格卖出，直到满足持仓均价全部平仓，快速收回本金)
         "profit_ratio": 3,             <-- 现货下次补仓比率，期货止盈比率   
         "double_throw_ratio": 3,       <-- 现货止盈比率，期货下次补仓比率
         "cointype": "EOSUSDT",
@@ -47,3 +51,6 @@
 
 3.运行脚本
 python3 eos.py
+
+### 更新事项
+[ x ] 持仓均价平仓  
